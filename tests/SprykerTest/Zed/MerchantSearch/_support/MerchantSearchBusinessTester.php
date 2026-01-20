@@ -49,12 +49,14 @@ class MerchantSearchBusinessTester extends Actor
      */
     protected const MERCHANT_STATUS_APPROVED = 'approved';
 
-    /**
-     * @return void
-     */
     public function setDependencies(): void
     {
-        $this->setQueueAdaptersDependency();
+        $this->setDependency(QueueDependencyProvider::QUEUE_ADAPTERS, function (Container $container) {
+            return [
+                $container->getLocator()->rabbitMq()->client()->createQueueAdapter(),
+                $container->getLocator()->symfonyMessenger()->client()->createQueueAdapter(),
+            ];
+        });
     }
 
     /**
@@ -158,21 +160,6 @@ class MerchantSearchBusinessTester extends Actor
             ->find();
 
         return $merchantSearchEntityCollection;
-    }
-
-    /**
-     * @return void
-     */
-    protected function setQueueAdaptersDependency(): void
-    {
-        $this->setDependency(
-            QueueDependencyProvider::QUEUE_ADAPTERS,
-            function (Container $container) {
-                return [
-                    $container->getLocator()->rabbitMq()->client()->createQueueAdapter(),
-                ];
-            },
-        );
     }
 
     /**
