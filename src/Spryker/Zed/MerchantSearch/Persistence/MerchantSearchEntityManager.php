@@ -33,11 +33,6 @@ class MerchantSearchEntityManager extends AbstractEntityManager implements Merch
         $merchantSearchCollection->delete();
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\MerchantSearchCollectionTransfer $merchantSearchCollectionTransfer
-     *
-     * @return void
-     */
     public function saveCollection(MerchantSearchCollectionTransfer $merchantSearchCollectionTransfer): void
     {
         $merchantSearchTransferIdMerchantMap = [];

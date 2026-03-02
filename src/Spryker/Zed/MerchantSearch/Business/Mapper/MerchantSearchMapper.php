@@ -26,10 +26,6 @@ class MerchantSearchMapper implements MerchantSearchMapperInterface
      */
     protected $merchantSearchDataMapper;
 
-    /**
-     * @param \Spryker\Zed\MerchantSearch\Dependency\Service\MerchantSearchToUtilEncodingServiceInterface $utilEncodingService
-     * @param \Spryker\Zed\MerchantSearch\Business\DataMapper\MerchantSearchDataMapperInterface $merchantSearchDataMapper
-     */
     public function __construct(
         MerchantSearchToUtilEncodingServiceInterface $utilEncodingService,
         MerchantSearchDataMapperInterface $merchantSearchDataMapper
@@ -38,12 +34,6 @@ class MerchantSearchMapper implements MerchantSearchMapperInterface
         $this->merchantSearchDataMapper = $merchantSearchDataMapper;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\MerchantTransfer $merchantTransfer
-     * @param \Generated\Shared\Transfer\MerchantSearchTransfer $merchantSearchTransfer
-     *
-     * @return \Generated\Shared\Transfer\MerchantSearchTransfer
-     */
     public function mapMerchantTransferToMerchantSearchTransfer(
         MerchantTransfer $merchantTransfer,
         MerchantSearchTransfer $merchantSearchTransfer
@@ -60,12 +50,6 @@ class MerchantSearchMapper implements MerchantSearchMapperInterface
         return $merchantSearchTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\MerchantCollectionTransfer $merchantCollectionTransfer
-     * @param \Generated\Shared\Transfer\MerchantSearchCollectionTransfer $merchantSearchCollectionTransfer
-     *
-     * @return \Generated\Shared\Transfer\MerchantSearchCollectionTransfer
-     */
     public function mapMerchantCollectionTransferToMerchantSearchCollectionTransfer(
         MerchantCollectionTransfer $merchantCollectionTransfer,
         MerchantSearchCollectionTransfer $merchantSearchCollectionTransfer

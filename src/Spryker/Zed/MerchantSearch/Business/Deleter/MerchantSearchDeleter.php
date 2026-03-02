@@ -31,11 +31,6 @@ class MerchantSearchDeleter implements MerchantSearchDeleterInterface
      */
     protected $eventBehaviorFacade;
 
-    /**
-     * @param \Spryker\Zed\MerchantSearch\Dependency\Facade\MerchantSearchToMerchantFacadeInterface $merchantFacade
-     * @param \Spryker\Zed\MerchantSearch\Persistence\MerchantSearchEntityManagerInterface $entityManager
-     * @param \Spryker\Zed\MerchantSearch\Dependency\Facade\MerchantSearchToEventBehaviorFacadeInterface $eventBehaviorFacade
-     */
     public function __construct(
         MerchantSearchToMerchantFacadeInterface $merchantFacade,
         MerchantSearchEntityManagerInterface $entityManager,

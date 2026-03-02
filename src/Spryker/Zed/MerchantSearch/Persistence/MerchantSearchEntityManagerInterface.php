@@ -18,10 +18,5 @@ interface MerchantSearchEntityManagerInterface
      */
     public function deleteMerchantSearchByMerchantIds(array $merchantIds): void;
 
-    /**
-     * @param \Generated\Shared\Transfer\MerchantSearchCollectionTransfer $merchantSearchCollectionTransfer
-     *
-     * @return void
-     */
     public function saveCollection(MerchantSearchCollectionTransfer $merchantSearchCollectionTransfer): void;
 }

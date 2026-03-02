@@ -16,9 +16,6 @@ class MerchantSearchPaginationConfigBuilder implements MerchantSearchPaginationC
      */
     protected $merchantSearchConfig;
 
-    /**
-     * @param \Spryker\Client\MerchantSearch\MerchantSearchConfig $merchantSearchConfig
-     */
     public function __construct(MerchantSearchConfig $merchantSearchConfig)
     {
         $this->merchantSearchConfig = $merchantSearchConfig;

@@ -38,11 +38,6 @@ class MerchantSearchDependencyProvider extends AbstractBundleDependencyProvider
      */
     public const PLUGINS_MERCHANT_SEARCH_DATA_EXPANDER = 'PLUGINS_MERCHANT_SEARCH_DATA_EXPANDER';
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     public function provideBusinessLayerDependencies(Container $container): Container
     {
         $container = parent::provideBusinessLayerDependencies($container);
@@ -57,11 +52,6 @@ class MerchantSearchDependencyProvider extends AbstractBundleDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addMerchantFacade(Container $container): Container
     {
         $container->set(static::FACADE_MERCHANT, function (Container $container) {
@@ -71,11 +61,6 @@ class MerchantSearchDependencyProvider extends AbstractBundleDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addEventBehaviorFacade(Container $container): Container
     {
         $container->set(static::FACADE_EVENT_BEHAVIOR, function (Container $container) {
@@ -87,11 +72,6 @@ class MerchantSearchDependencyProvider extends AbstractBundleDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addUtilEncodingService(Container $container): Container
     {
         $container->set(static::SERVICE_UTIL_ENCODING, function (Container $container) {
@@ -103,11 +83,6 @@ class MerchantSearchDependencyProvider extends AbstractBundleDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addMerchantSearchDataExpanderPlugins(Container $container): Container
     {
         $container->set(static::PLUGINS_MERCHANT_SEARCH_DATA_EXPANDER, function () {

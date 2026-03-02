@@ -12,12 +12,6 @@ use Orm\Zed\MerchantSearch\Persistence\SpyMerchantSearch;
 
 class MerchantSearchMapper
 {
-    /**
-     * @param \Generated\Shared\Transfer\MerchantSearchTransfer $merchantSearchTransfer
-     * @param \Orm\Zed\MerchantSearch\Persistence\SpyMerchantSearch $merchantSearchEntity
-     *
-     * @return \Orm\Zed\MerchantSearch\Persistence\SpyMerchantSearch
-     */
     public function mapMerchantSearchTransferToMerchantSearchEntity(
         MerchantSearchTransfer $merchantSearchTransfer,
         SpyMerchantSearch $merchantSearchEntity

@@ -18,17 +18,11 @@ use Spryker\Zed\MerchantSearch\Persistence\Propel\Mapper\MerchantSearchMapper;
  */
 class MerchantSearchPersistenceFactory extends AbstractPersistenceFactory
 {
-    /**
-     * @return \Orm\Zed\MerchantSearch\Persistence\SpyMerchantSearchQuery
-     */
     public function getMerchantSearchPropelQuery(): SpyMerchantSearchQuery
     {
         return SpyMerchantSearchQuery::create();
     }
 
-    /**
-     * @return \Spryker\Zed\MerchantSearch\Persistence\Propel\Mapper\MerchantSearchMapper
-     */
     public function createMerchantSearchMapper(): MerchantSearchMapper
     {
         return new MerchantSearchMapper();

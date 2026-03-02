@@ -59,9 +59,6 @@ class MerchantSearchBusinessTester extends Actor
         });
     }
 
-    /**
-     * @return void
-     */
     public function cleanUpDatabase(): void
     {
         $this->cleanUpMerchantSearchTable();
@@ -131,11 +128,6 @@ class MerchantSearchBusinessTester extends Actor
         return $merchantTransfers;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\MerchantTransfer $merchantTransfer
-     *
-     * @return \Generated\Shared\Transfer\MerchantResponseTransfer
-     */
     public function updateMerchant(MerchantTransfer $merchantTransfer): MerchantResponseTransfer
     {
         return $this->getLocator()
@@ -162,17 +154,11 @@ class MerchantSearchBusinessTester extends Actor
         return $merchantSearchEntityCollection;
     }
 
-    /**
-     * @return void
-     */
     protected function cleanUpMerchantSearchTable(): void
     {
         $this->createMerchantSearchQuery()->deleteAll();
     }
 
-    /**
-     * @return \Orm\Zed\MerchantSearch\Persistence\SpyMerchantSearchQuery
-     */
     protected function createMerchantSearchQuery(): SpyMerchantSearchQuery
     {
         return SpyMerchantSearchQuery::create();

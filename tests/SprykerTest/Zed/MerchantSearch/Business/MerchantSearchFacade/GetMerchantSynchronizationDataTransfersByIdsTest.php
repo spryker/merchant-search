@@ -54,9 +54,6 @@ class GetMerchantSynchronizationDataTransfersByIdsTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     protected function setUp(): void
     {
         parent::setUp();
@@ -65,9 +62,6 @@ class GetMerchantSynchronizationDataTransfersByIdsTest extends Unit
         $this->tester->cleanUpDatabase();
     }
 
-    /**
-     * @return void
-     */
     public function testGetSynchronizationDataTransfersByMerchantIdsWorksWithIds(): void
     {
         // Arrange
@@ -88,9 +82,6 @@ class GetMerchantSynchronizationDataTransfersByIdsTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testGetSynchronizationDataTransfersByMerchantIdsWorksWithFilter(): void
     {
         // Arrange
@@ -109,9 +100,6 @@ class GetMerchantSynchronizationDataTransfersByIdsTest extends Unit
         $this->assertSame($merchantIds[0], $synchronizationData[static::SEARCH_RESULT_DATA][static::ID_MERCHANT]);
     }
 
-    /**
-     * @return void
-     */
     public function testGetSynchronizationDataTransfersByMerchantIdsWorksWithFilterAndIds(): void
     {
         // Arrange

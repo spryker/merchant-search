@@ -20,17 +20,11 @@ use Spryker\Client\SearchExtension\Dependency\Plugin\QueryInterface;
  */
 class MerchantSearchFactory extends AbstractFactory
 {
-    /**
-     * @return \Spryker\Client\MerchantSearch\Dependency\Client\MerchantSearchToSearchClientInterface
-     */
     public function getSearchClient(): MerchantSearchToSearchClientInterface
     {
         return $this->getProvidedDependency(MerchantSearchDependencyProvider::CLIENT_SEARCH);
     }
 
-    /**
-     * @return \Spryker\Client\MerchantSearch\Reader\MerchantSearchReaderInterface
-     */
     public function createMerchantSearchReader(): MerchantSearchReaderInterface
     {
         return new MerchantSearchReader(
@@ -41,9 +35,6 @@ class MerchantSearchFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \Spryker\Client\SearchExtension\Dependency\Plugin\QueryInterface
-     */
     public function getMerchantSearchQueryPlugin(): QueryInterface
     {
         return $this->getProvidedDependency(MerchantSearchDependencyProvider::PLUGIN_MERCHANT_SEARCH_QUERY);
@@ -65,9 +56,6 @@ class MerchantSearchFactory extends AbstractFactory
         return $this->getProvidedDependency(MerchantSearchDependencyProvider::PLUGINS_MERCHANT_SEARCH_RESULT_FORMATTER);
     }
 
-    /**
-     * @return \Spryker\Client\MerchantSearch\PaginationConfigBuilder\MerchantSearchPaginationConfigBuilderInterface
-     */
     public function createMerchantSearchPaginationConfigBuilder(): MerchantSearchPaginationConfigBuilderInterface
     {
         return new MerchantSearchPaginationConfigBuilder(

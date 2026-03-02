@@ -124,21 +124,11 @@ class MerchantSearchWriter implements MerchantSearchWriterInterface
         $this->writeCollection($merchantSearchCollectionTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\MerchantSearchCollectionTransfer $merchantSearchCollectionTransfer
-     *
-     * @return void
-     */
     protected function writeCollection(MerchantSearchCollectionTransfer $merchantSearchCollectionTransfer): void
     {
         $this->merchantSearchEntityManager->saveCollection($merchantSearchCollectionTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\MerchantSearchCollectionTransfer $merchantSearchCollectionTransfer
-     *
-     * @return \Generated\Shared\Transfer\MerchantSearchCollectionTransfer
-     */
     protected function expandMerchantSearchData(MerchantSearchCollectionTransfer $merchantSearchCollectionTransfer): MerchantSearchCollectionTransfer
     {
         foreach ($this->merchantSearchDataExpanderPlugins as $merchantSearchDataExpanderPlugin) {

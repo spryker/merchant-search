@@ -34,9 +34,6 @@ class DeleteCollectionByMerchantEventsTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     protected function setUp(): void
     {
         parent::setUp();
@@ -45,9 +42,6 @@ class DeleteCollectionByMerchantEventsTest extends Unit
         $this->tester->cleanUpDatabase();
     }
 
-    /**
-     * @return void
-     */
     public function testDeleteCollectionByMerchantEventsForDeactivatedMerchantDeletesRecords(): void
     {
         // Arrange
@@ -66,9 +60,6 @@ class DeleteCollectionByMerchantEventsTest extends Unit
         $this->assertSame(0, $merchantSearchCount);
     }
 
-    /**
-     * @return void
-     */
     public function testDeleteCollectionByMerchantEventsForInactiveMerchantDeletesRecords(): void
     {
         // Arrange

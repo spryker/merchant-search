@@ -27,9 +27,6 @@ class WriteCollectionByMerchantEventsTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     protected function setUp(): void
     {
         parent::setUp();
@@ -38,9 +35,6 @@ class WriteCollectionByMerchantEventsTest extends Unit
         $this->tester->cleanUpDatabase();
     }
 
-    /**
-     * @return void
-     */
     public function testWriteCollectionByMerchantEventsForActiveMerchantRecords(): void
     {
         // Arrange
@@ -61,9 +55,6 @@ class WriteCollectionByMerchantEventsTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testWriteCollectionByMerchantEventsReturnsNothingForInactiveMerchantRecords(): void
     {
         // Arrange

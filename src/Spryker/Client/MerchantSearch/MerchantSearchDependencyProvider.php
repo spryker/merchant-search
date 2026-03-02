@@ -38,11 +38,6 @@ class MerchantSearchDependencyProvider extends AbstractDependencyProvider
      */
     public const PLUGINS_MERCHANT_SEARCH_QUERY_EXPANDER = 'PLUGINS_MERCHANT_SEARCH_QUERY_EXPANDER';
 
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Kernel\Container
-     */
     public function provideServiceLayerDependencies(Container $container): Container
     {
         $container = parent::provideServiceLayerDependencies($container);
@@ -55,11 +50,6 @@ class MerchantSearchDependencyProvider extends AbstractDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Kernel\Container
-     */
     protected function addSearchClient(Container $container): Container
     {
         $container->set(static::CLIENT_SEARCH, function (Container $container) {
@@ -71,11 +61,6 @@ class MerchantSearchDependencyProvider extends AbstractDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Kernel\Container
-     */
     protected function addMerchantSearchQueryPlugin(Container $container): Container
     {
         $container->set(static::PLUGIN_MERCHANT_SEARCH_QUERY, function () {
@@ -85,19 +70,11 @@ class MerchantSearchDependencyProvider extends AbstractDependencyProvider
         return $container;
     }
 
-    /**
-     * @return \Spryker\Client\SearchExtension\Dependency\Plugin\QueryInterface
-     */
     protected function createMerchantSearchQueryPlugin(): QueryInterface
     {
         return new MerchantSearchQueryPlugin();
     }
 
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Kernel\Container
-     */
     protected function addMerchantSearchQueryExpanderPlugins(Container $container): Container
     {
         $container->set(static::PLUGINS_MERCHANT_SEARCH_QUERY_EXPANDER, function () {
@@ -107,11 +84,6 @@ class MerchantSearchDependencyProvider extends AbstractDependencyProvider
         return $container;
     }
 
-   /**
-    * @param \Spryker\Client\Kernel\Container $container
-    *
-    * @return \Spryker\Client\Kernel\Container
-    */
     protected function addMerchantSearchResultFormatterPlugins(Container $container): Container
     {
         $container->set(static::PLUGINS_MERCHANT_SEARCH_RESULT_FORMATTER, function () {
